@@ -1,0 +1,24 @@
+CREATE DATABASE `WHITESPIDER`;
+#데이터 베이스 생성 완료
+SHOW DATABASES;
+#데이터 베이스 삭제 하기
+DROP DATABASE `MEMBER`;
+#사용할 DB 선택
+USE `WHITESPIDER`;
+
+CREATE TABLE `MEMBER`(
+`idx` INT UNSIGNED NOT NULL AUTO_INCREMENT,
+`name` VARCHAR(100) DEFAULT'',
+`id` VARCHAR(100) DEFAULT'',
+`pawwword` VARCHAR(100) DEFAULT'',
+`create_at` DATETIME,
+PRIMARY KEY(idx),
+UNIQUE INDEX `name` (`name`) USING BTREE
+);
+
+#특정 테이블의 데이터 조희
+SELECT * FROM `member`;
+
+#특정 테이블의 데이터 입력하기
+INSERT INTO MEMBER (`name`,`id`)
+VALUES ('spiderman', 'spider2');
